@@ -2,6 +2,10 @@
 
 A beautiful and efficient clipboard manager for Hyprland with image preview support using kitty, fzf, and cliphist.
 
+<img height="300" alt="image" src="https://github.com/user-attachments/assets/8a9eec2c-c7cb-462d-98eb-e8c1d1d00c94" />
+<img height="300" alt="image" src="https://github.com/user-attachments/assets/c9830ee4-c1b8-4a95-89aa-33073bc32041" />
+
+
 ## ✨ Features
 
 - 📋 **Clipboard History**: Keep track of all your copied text and images
@@ -59,11 +63,6 @@ cp fzf-cliphist-preview.sh ~/.config/omarchy/bin/
 chmod +x ~/.config/omarchy/bin/fzf-cliphist-preview.sh
 ```
 
-3. Add to your Hyprland config (`~/.config/hypr/bindings.conf` or `hyprland.conf`):
-```conf
-bind = ALT, V, exec, sh -c 'kitty --class fzf-clip -o font_size=10 -e sh -c "cliphist list | fzf -d $'\t' --with-nth 2 --preview-window=top:50% --preview '\''~/.config/omarchy/bin/fzf-cliphist-preview.sh {}'\'' | cliphist decode | wl-copy" && wtype -M ctrl -M shift -k v -m ctrl -m shift'
-```
-
 4. Add window rules to your Hyprland config (`~/.config/hypr/windows.conf` or `hyprland.conf`):
 ```conf
 windowrulev2 = size 20% 45%,class:(fzf-clip)
@@ -113,8 +112,6 @@ windowrulev2 = size 20% 45%,class:(fzf-clip)  # Modify width% height%
 ```
 
 ### Font Size
-
-Change the terminal font size in the keybinding:
 
 ```conf
 kitty --class fzf-clip -o font_size=10  # Change font_size value
