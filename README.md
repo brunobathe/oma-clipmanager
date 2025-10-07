@@ -70,7 +70,7 @@ windowrulev2 = size 20% 45%,class:(fzf-clip)
 windowrulev2 = float,class:(fzf-clip)
 ```
 
-5. Enable clipboard history monitoring (add to your Hyprland config):
+5. Enable clipboard history monitoring (add to `~/.config/hypr/autostart.conf` or your Hyprland config):
 ```conf
 exec-once = wl-paste --type text --watch cliphist store
 exec-once = wl-paste --type image --watch cliphist store

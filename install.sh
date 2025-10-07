@@ -115,12 +115,25 @@ else
     echo ""
 fi
 
-# Setup cliphist with wl-paste
-echo ""
-echo -e "${BLUE}Setting up clipboard history...${NC}"
-echo -e "${YELLOW}Note: To enable clipboard history monitoring, add the following to your Hyprland config:${NC}"
-echo -e "${BLUE}exec-once = wl-paste --type text --watch cliphist store${NC}"
-echo -e "${BLUE}exec-once = wl-paste --type image --watch cliphist store${NC}"
+# Setup cliphist with wl-paste (autostart)
+AUTOSTART_CONTENT='exec-once = wl-paste --type text --watch cliphist store
+exec-once = wl-paste --type image --watch cliphist store'
+
+AUTOSTART_FILE="$HOME/.config/hypr/autostart.conf"
+if [ -f "$AUTOSTART_FILE" ]; then
+    if ! grep -q "cliphist store" "$AUTOSTART_FILE"; then
+        echo "$AUTOSTART_CONTENT" >> "$AUTOSTART_FILE"
+        echo -e "${GREEN}✓ Autostart commands added to $AUTOSTART_FILE${NC}"
+    else
+        echo -e "${YELLOW}! Clipboard monitoring already configured in $AUTOSTART_FILE${NC}"
+    fi
+else
+    echo -e "${YELLOW}! File $AUTOSTART_FILE not found${NC}"
+    echo -e "${YELLOW}! Please add the following to your Hyprland config:${NC}"
+    echo ""
+    echo -e "${BLUE}$AUTOSTART_CONTENT${NC}"
+    echo ""
+fi
 
 echo ""
 echo -e "${GREEN}================================${NC}"
